@@ -166,14 +166,25 @@ const { createApp } = Vue
                     }
                 ],
             }
-        ]
+        ],
+        newMessage: ''
+
+
       }
     },
 
     methods:{
         changeChat(index) {
             this.activeContact = index;
-        }
+        },
+
+        sendMessage() {
+            this.contacts[activeContact].messages.push({
+                message: this.newMessage,
+                status: 'sent',
+                date: '11/07/2023 12:00',
+            });
+        },
     }
 
   }).mount('#app')

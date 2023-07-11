@@ -190,7 +190,7 @@
 
                                 <div class="text-area">
 
-                                    <input type="text" placeholder="Scrivi un messaggio">
+                                    <input @keyup.enter="sendMessage()" type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
 
                                 </div>
 
