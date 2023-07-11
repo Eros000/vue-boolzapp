@@ -4,29 +4,154 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Template HTML CSS Base</title>
+        <title>Boolzapp con Vue</title>
+
+
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-
-        <header>
-            HEADER
-        </header>
-
+        
         <main>
-            <div class="container">
-                MAIN
+
+            <div id="app">
+
+                <div class="background">
+        
+                    <div class="container">
+    
+                        <!--LEFT-SIDE-->
+                    
+                        <div class="left">
+    
+                            <div class="left-header">
+    
+                                <div class="my-account">
+    
+                                    <div class="my-account-box">
+    
+                                        <div class="my-account-img">
+                                            
+                                        </div>
+        
+                                        <div class="my-account-name">
+                                            Sofia
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="my-account-buttons">
+    
+                                        <i class="fa-solid fa-circle-notch" style="color: #b0b0b0;"></i>
+                                        <i class="fa-solid fa-message" style="color: #b0b0b0;"></i>
+                                        <i class="fa-solid fa-ellipsis-vertical" style="color: #b0b0b0;"></i>
+    
+                                    </div>
+    
+    
+                                </div>
+    
+                                <div class="notifications">
+    
+                                    <div class="icon-bell">
+    
+                                        <i class="fa-solid fa-bell-slash" style="color: #56ddff;"></i>
+                                        
+                                    </div>
+    
+                                    <div class="set-notifications">
+    
+                                        <div>
+                                            Ricevi notifiche di nuovi messaggi
+                                        </div>
+    
+                                        <a href="#no-go">
+                                            Attiva notifiche descktop
+                                        </a>
+    
+                                    </div>
+    
+                                </div>
+    
+                                <div class="research-bar">
+    
+                                    <button>
+                                        <i class="fa-solid fa-magnifying-glass" style="color: #b0b0b0;"></i>
+                                    </button>
+    
+                                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="left-main">
+    
+                                <div class="contacts-list">
+    
+                                    <div class="single-contact" v-for="singleContact in contacts">
+    
+                                        <img class="small-circle-img" :src="singleContact.avatar" :alt="singleContact.name">
+    
+                                        <div class="contact-info">
+    
+                                            <p>
+                                                {{singleContact.name}}
+                                            </p>
+                                            
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+                                
+                            </div>
+        
+                        </div>
+    
+                        <!--RIGHT-SIDE-->
+        
+                        
+                        <div class="right">
+    
+                            <div class="right-header">
+
+                                <div class="open-chat-id">
+
+                                    <div class="right-circle-img">
+
+                                    </div>
+                                    
+
+                                </div>
+    
+                            </div>
+    
+                            <div class="right-main">
+    
+                            </div>
+    
+                            <div class="right-footer">
+    
+                            </div>
+            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
             </div>
+            
+            
         </main>
 
-        <footer>
-            FOOTER
-        </footer>
-
         <!--Java Script-->
-
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript"  src="js/script.js"></script>
 
     </body>

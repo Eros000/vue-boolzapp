@@ -10,11 +10,196 @@
 /* 
     GENERAL
 */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(226,224,205,1) 85%, rgba(10,159,132,1) 15%);
+    display: flex;
+    align-items: center;
 }
+
+
+.container {
+    width: calc(100vw - 300px);
+    height: calc(100vh - 100px);
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+}
+
+
+
+
+/*
+LEFT-SIDE
+*/
+
+.left{
+    height: 100%;
+    width: 35%;
+    
+}
+
+.left-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.my-account{
+    width: 100%;
+    height: 70px;
+    background-color: gainsboro;
+    border: 1px solid rgb(207, 207, 207);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+.my-account-box{
+    display: flex;
+    align-items: center;
+}
+
+.my-account-img{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/avatar_io.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.my-account-buttons{
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.my-account-buttons i{
+    margin-right: 10px;
+}
+
+
+
+.notifications{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(86, 221, 255);
+    display: flex;
+    align-items: center;
+}
+
+.icon-bell{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 12px;
+    font-size: 24px;
+}
+
+.set-notifications{
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.set-notifications div{
+    font-weight: 700;
+}
+
+.set-notifications a{
+    color: rgb(122, 122, 122);
+    font-size: small;
+}
+
+.research-bar{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+    padding-top: 7px;
+}
+
+.research-bar button{
+    width: 15%;
+    height: 25px;
+    margin-right: 0;
+}
+
+.research-bar input{
+    width: 75%;
+    height: 25px;
+    margin-left: 0;
+}
+
+.single-contact{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(207, 207, 207);;
+}
+
+.small-circle-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.contact-info{
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+/*
+    RIGHT-SIDE
+*/
+
+.right{
+    height: 100%;
+    width: 65%;
+    
+}
+
+.right-header{
+    width: 100%;
+    height: 70px;
+    background-color: gainsboro;
+    border: 1px solid rgb(207, 207, 207);
+}
+
+.right-main{
+    width: 100%;
+    height: calc(100% - 140px);
+    background-image: url('../img/mine.jpg');
+}
+
+.right-footer{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(235, 232, 228);
+}
+
+
+
+
+
+
