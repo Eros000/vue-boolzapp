@@ -92,7 +92,7 @@
     
                                 <div class="contacts-list">
     
-                                    <div class="single-contact" v-for="singleContact in contacts">
+                                    <div @click="changeChat(i)"  class="single-contact" v-for="(singleContact, i) in contacts">
     
                                         <img class="small-circle-img" :src="singleContact.avatar" :alt="singleContact.name">
     
@@ -121,14 +121,17 @@
 
                                 <div class="open-chat-id">
 
-                                    <img class="small-circle-img" src="img/avatar_1.jpg" alt="Michele">
+                                    <img class="small-circle-img" :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
 
                                     <div class="contact-info">
 
                                         <p>
-                                            Michele
+                                            {{contacts[activeContact].name}}
                                         </p>
-                                        
+
+                                        <p>
+                                           <small>Ultimo accesso oggi alle</small> 
+                                        </p>
                                     </div>
 
                                     
@@ -150,15 +153,30 @@
     
                             <div class="right-main">
 
-                                <div class="received">
+                                <template v-for="singleMessage in contacts[activeContact].messages">
 
-                                    Hai portato a spasso il cane?
-                                    
-                                    <small>15:30</small>
-                                    
-                                </div>
+                                    <div v-if="singleMessage.status == 'sent'" 
+                                        class="neutro sent">
+    
+                                        {{singleMessage.message}}
+                                        
+                                        <small>{{singleMessage.date}}</small>
+                                        
+                                    </div>
 
-                                <div class="received">
+                                    <div v-else 
+                                        class="neutro received">
+    
+                                        {{singleMessage.message}}
+                                        
+                                        <small>{{singleMessage.date}}</small>
+                                        
+                                    </div>
+
+                                </template>
+
+
+                                <!--<div class="received">
 
                                     Ricordati di stendere i panni
 
@@ -172,7 +190,7 @@
 
                                     <small>16:15</small>
 
-                                </div>
+                                </div>-->
 
     
                             </div>

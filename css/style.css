@@ -214,16 +214,54 @@ LEFT-SIDE
     padding-top: 50px;
 }
 
-.sent{
-    background-color: white;
+.neutro{
+    background-color: lightsalmon;
     width: 300px;
-    height: 60px;
     margin-left: 20px;
     margin-bottom: 15px;
     border-radius: 15%;
     border-radius: 20px;
     padding-top: 15px;
     padding-left: 10px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.neutro small{
+    position: absolute;
+    right: 9px;
+    bottom: 0;
+}
+
+.received{
+    background-color: white;
+    width: 300px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 15%;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.received small{
+    position: absolute;
+    right: 9px;
+    bottom: 0;
+}
+
+.sent{
+    background-color: rgb(47, 214, 47);
+    width: 300px;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 15px;
     position: relative;
 }
 
@@ -233,24 +271,6 @@ LEFT-SIDE
     bottom: 0;
 }
 
-.received{
-    background-color: rgb(47, 214, 47);
-    width: 300px;
-    height: 60px;
-    align-self: flex-end;
-    margin-right: 20px;
-    margin-bottom: 15px;
-    border-radius: 20px;
-    padding-top: 15px;
-    padding-left: 10px;
-    position: relative;
-}
-
-.received small{
-    position: absolute;
-    right: 9px;
-    bottom: 0;
-}
 
 .right-footer{
     width: 100%;
