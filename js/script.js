@@ -179,7 +179,7 @@ const { createApp } = Vue
         },
 
         sendMessage() {
-            this.contacts[activeContact].messages.push({
+            this.contacts[this.activeContact].messages.push({
                 message: this.newMessage,
                 status: 'sent',
                 date: '11/07/2023 12:00',
